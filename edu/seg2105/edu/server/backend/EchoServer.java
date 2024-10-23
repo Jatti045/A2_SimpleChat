@@ -77,17 +77,19 @@ public class EchoServer extends AbstractServer
    * accepted. The default implementation does nothing.
    * @param client the connection connected to the client.
    */
+  @Override
   protected void clientConnected(ConnectionToClient client) {
     System.out.println("Welcome! A client has just connected to the server");
   }
 
   /**
-   * Implements a hook method called each time a client disconnects.
+   * Hook method called each time a client disconnects.
    * The default implementation does nothing. The method
    * may be overridden by subclasses but should remains synchronized.
    *
    * @param client the connection with the client.
    */
+  @Override
   synchronized protected void clientDisconnected(
           ConnectionToClient client) {
     System.out.println("Goodbye! A client has just disconnected from the server.");
