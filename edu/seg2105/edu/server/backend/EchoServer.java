@@ -79,7 +79,7 @@ public class EchoServer extends AbstractServer
    */
   @Override
   protected void clientConnected(ConnectionToClient client) {
-    System.out.println("Welcome! A client has just connected to the server");
+    System.out.println("Welcome! A client has just connected to the server: " + client);
   }
 
   /**
@@ -92,10 +92,10 @@ public class EchoServer extends AbstractServer
   @Override
   synchronized protected void clientDisconnected(
           ConnectionToClient client) {
-    System.out.println("Goodbye! A client has just disconnected from the server.");
+    System.out.println("Goodbye! A client has just disconnected from the server: " + client);
   }
-  
-  
+
+
   //Class methods ***************************************************
   
   /**
